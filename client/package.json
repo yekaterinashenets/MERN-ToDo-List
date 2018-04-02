@@ -1,0 +1,40 @@
+{
+  "name": "mern-to-do-list",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/material-ui": "^0.21.1",
+    "@types/react-redux": "^5.0.15",
+    "@types/react-router-dom": "^4.2.6",
+    "axios": "^0.18.0",
+    "material-ui": "^0.20.0",
+    "node-sass-chokidar": "^1.2.2",
+    "npm": "^5.7.1",
+    "npm-run-all": "^4.1.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts-ts": "2.14.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "test": "npm run build-css && react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject",
+    "start-js": "react-scripts-ts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts-ts build",
+    "build": "npm-run-all build-css build-js"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.2",
+    "@types/node": "^9.6.1",
+    "@types/react": "^16.1.0",
+    "@types/react-dom": "^16.0.4",
+    "typescript": "^2.8.1"
+  }
+}
