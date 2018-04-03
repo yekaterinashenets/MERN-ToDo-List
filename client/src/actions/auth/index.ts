@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { UserModel } from './../../models/UserModel';
 
-const apiUrl = ' http://192.168.0.105:3001/auth';
+const apiUrl = ' http://192.168.1.23:3001/auth';
 
 export const LOGIN = '[Auth] Send request for login';
 export const login = (name: string, password: string) => {

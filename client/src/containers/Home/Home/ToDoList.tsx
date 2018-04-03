@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './Home.css';
 import { ItemModel } from './../../../models/ItemModel';
 import { List, ListItem } from 'material-ui/List';
 import Checkbox from 'material-ui/Checkbox';

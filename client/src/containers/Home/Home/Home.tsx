@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './Home.css';
+import * as styles from './Home.css';
 import { connect } from 'react-redux';
 import { getItems, toggleItem, deleteItem, createItem } from '../../../actions/items';
 import { ItemModel } from './../../../models/ItemModel';
@@ -70,8 +70,8 @@ class Home extends React.Component<Props & RouteComponentProps<any>, State> {
     render() {
         let { items } = this.props;
         return (
-            <div className="home">
-                <div className="home__create">
+            <div className={styles.container}>
+                <div className={styles.create}>
                         <CreateItem
                             isButtonDisabled={!this.isButtonDisabled()}
                             onChangeFor={this.onChangeFor}
@@ -79,7 +79,7 @@ class Home extends React.Component<Props & RouteComponentProps<any>, State> {
                             getForm={this.getForm}
                         />
                 </div>
-                <div className="home__list">
+                <div className={styles.list}>
                         <ToDoList 
                             items={items || []} 
                             onToggleItem={this.onToggleItem}

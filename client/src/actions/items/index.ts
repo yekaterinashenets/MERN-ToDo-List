@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { ItemModel } from '../../models/ItemModel';
 
-const apiUrl = ' http://192.168.0.105:3001/items';
+const apiUrl = ' http://192.168.1.23:3001/items';
 
 export const GET_ALL_ITEMS = '[Items] Send request for get items';
 export const getItems = (userId: string) => {

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './Auth.css';
+import * as styles from './Auth.css';
 import { connect } from 'react-redux';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -46,16 +46,16 @@ class Auth extends React.Component<Props & RouteComponentProps<any>, State> {
 
     render() {
         return (
-            <div className="auth">
-                <form className="auth__form">
-                    <div className="auth__field">
+            <div className={styles.container}>
+                <form className="form">
+                    <div className={styles.field}>
                         <TextField
                             hintText="Name"
                             floatingLabelText="Name"
                             onChange={this.onChangeFor('name')}
                         />
                     </div>
-                    <div className="auth__field">
+                    <div className={styles.field}>
                         <TextField
                             hintText="Password"
                             type="password"
@@ -63,7 +63,7 @@ class Auth extends React.Component<Props & RouteComponentProps<any>, State> {
                             onChange={this.onChangeFor('password')}
                         />
                     </div>
-                    <div className="auth__btn">
+                    <div className={styles.btn}>
                         <RaisedButton
                             disabled={this.isButtonDisabled()}
                             label="login"

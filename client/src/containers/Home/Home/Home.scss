@@ -1,24 +1,24 @@
-.home {
+.container {
     max-width: 750px;
     margin: auto;
     display: flex;
     justify-content: space-between;
     padding: 40px 0;
-    &__create {
-        margin-right: 40px;
-    }
-    &__list {
-        flex-grow: 1;
-    }
+}
+.create {
+    margin-right: 40px;
 }
 
-.create-item {
-    &__field:not(:first-child) {
-        margin-top: 10px;
-    }
-    &__btn {
-        margin-top: 30px;
-        display: flex;
-        justify-content: flex-end;
-    }
+.list {
+    flex-grow: 1;
+}
+
+.field:not(:first-child) {
+    margin-top: 10px;
+}
+
+.btn {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
 }
