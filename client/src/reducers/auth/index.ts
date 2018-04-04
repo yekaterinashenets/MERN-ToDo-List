@@ -1,7 +1,9 @@
-import { SAVE_USER } from './../../actions/auth';
+import { SAVE_USER, CREATE_FAILED, LOGIN_FAILED } from './../../actions/auth';
 
 const initialState = {
-    user: undefined
+    user: undefined,
+    loginErrorText: '',
+    signupErrorText: ''
 };
 
 export const auth = (state = initialState, action: any) => {
@@ -9,7 +11,19 @@ export const auth = (state = initialState, action: any) => {
         case SAVE_USER:
             return {
                 ...state,
+                signupErrorText: '',
+                loginErrorText: '',
                 user: action.user
+            };
+        case CREATE_FAILED: 
+            return {
+                ...state,
+                signupErrorText: action.errorText
+            };
+        case LOGIN_FAILED: 
+            return {
+                ...state,
+                loginErrorText: action.errorText
             };
         default:
             return state;

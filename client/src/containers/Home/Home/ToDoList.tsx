@@ -11,6 +11,12 @@ interface Props {
     onDeleteItem: Function;
 }
 
+const checkDate = (date: Date) => {
+    const currentDate = new Date().getTime();
+    const expireDate = new Date(date).getTime() + 86400000;
+    return currentDate > expireDate;
+};
+
 const ToDoList = (props: Props) => {
     const items = props.items.map((item) => (
         <ListItem
@@ -19,6 +25,7 @@ const ToDoList = (props: Props) => {
             secondaryText={item.description}
             leftCheckbox={
                 <Checkbox 
+                    disabled={checkDate(item.date)}
                     defaultChecked={item.isDone}
                     onCheck={props.onToggleItem(item._id)}
                 />

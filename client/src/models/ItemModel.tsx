@@ -4,4 +4,5 @@ export interface ItemModel {
     name: string;
     __v: number;
     _id: string;
+    date: Date;
 }
